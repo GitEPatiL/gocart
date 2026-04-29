@@ -29,7 +29,7 @@ const ProductDescription = ({ product }) => {
                                     ))}
                                 </div>
                                 <p className="text-sm max-w-lg my-4">{item.review}</p>
-                                <p className="font-medium text-slate-800">{item.user.name}</p>
+                                <p className="font-medium text-red-950">{item.user.name}</p>
                                 <p className="mt-3 font-light">{new Date(item.createdAt).toDateString()}</p>
                             </div>
                         </div>

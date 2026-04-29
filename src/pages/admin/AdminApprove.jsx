@@ -23,7 +23,7 @@ export default function AdminApprove() {
 
     return !loading ? (
         <div className="text-slate-500 mb-28">
-            <h1 className="text-2xl">Approve <span className="text-slate-800 font-medium">Stores</span></h1>
+            <h1 className="text-2xl">Approve <span className="text-red-950 font-medium">Stores</span></h1>
 
             {stores.length ? (
                 <div className="flex flex-col gap-4 mt-4">

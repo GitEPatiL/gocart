@@ -36,7 +36,7 @@ export default function AdminDashboard() {
 
     return (
         <div className="text-slate-500">
-            <h1 className="text-2xl">Admin <span className="text-slate-800 font-medium">Dashboard</span></h1>
+            <h1 className="text-2xl">Admin <span className="text-red-950 font-medium">Dashboard</span></h1>
 
             {/* Cards */}
             <div className="flex flex-wrap gap-5 my-10 mt-4">

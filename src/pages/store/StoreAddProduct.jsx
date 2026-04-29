@@ -19,7 +19,7 @@ export default function StoreAddProduct() {
 
     return (
         <form onSubmit={e => toast.promise(onSubmitHandler(e), { loading: 'Adding Product...' })} className="text-slate-500 mb-28">
-            <h1 className="text-2xl">Add New <span className="text-slate-800 font-medium">Products</span></h1>
+            <h1 className="text-2xl">Add New <span className="text-red-950 font-medium">Products</span></h1>
             <p className="mt-7">Product Images</p>
             <div className="flex gap-3 mt-4">
                 {Object.keys(images).map((key) => (

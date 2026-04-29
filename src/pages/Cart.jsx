@@ -41,7 +41,7 @@ export default function Cart() {
     }, [cartItems, products])
 
     return cartArray.length > 0 ? (
-        <div className="min-h-screen mx-6 text-slate-800">
+        <div className="min-h-screen mx-6 text-red-950">
             <div className="max-w-7xl mx-auto">
                 <PageTitle heading="My Cart" text="items in your cart" linkText="Add more" />
 

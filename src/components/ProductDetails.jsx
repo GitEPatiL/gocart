@@ -31,14 +31,14 @@ const ProductDetails = ({ product }) => {
                 </div>
             </div>
             <div className="flex-1">
-                <h1 className="text-3xl font-semibold text-slate-800">{product.name}</h1>
+                <h1 className="text-3xl font-semibold text-red-950">{product.name}</h1>
                 <div className="flex items-center mt-2">
                     {Array(5).fill('').map((_, index) => (
                         <StarIcon key={index} size={14} className="text-transparent mt-0.5" fill={averageRating >= index + 1 ? '#00C950' : '#D1D5DB'} />
                     ))}
                     <p className="text-sm ml-3 text-slate-500">{product.rating.length} Reviews</p>
                 </div>
-                <div className="flex items-start my-6 gap-3 text-2xl font-semibold text-slate-800">
+                <div className="flex items-start my-6 gap-3 text-2xl font-semibold text-red-950">
                     <p>{currency}{product.price}</p>
                     <p className="text-xl text-slate-500 line-through">{currency}{product.mrp}</p>
                 </div>
@@ -49,7 +49,7 @@ const ProductDetails = ({ product }) => {
                 <div className="flex items-end gap-5 mt-10">
                     {cart[productId] && (
                         <div className="flex flex-col gap-3">
-                            <p className="text-lg text-slate-800 font-semibold">Quantity</p>
+                            <p className="text-lg text-red-950 font-semibold">Quantity</p>
                             <Counter productId={productId} />
                         </div>
                     )}
@@ -60,7 +60,7 @@ const ProductDetails = ({ product }) => {
                         {!cart[productId] ? 'Add to Cart' : 'View Cart'}
                     </button>
                 </div>
-                <hr className="border-gray-300 my-5" />
+                <hr className="border-red-200 my-5" />
                 <div className="flex flex-col gap-4 text-slate-500">
                     <p className="flex gap-3"><EarthIcon className="text-slate-400" /> Free shipping worldwide</p>
                     <p className="flex gap-3"><CreditCardIcon className="text-slate-400" /> 100% Secured Payment</p>

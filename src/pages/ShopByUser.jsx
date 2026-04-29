@@ -33,7 +33,7 @@ export default function ShopByUser() {
                         className="size-32 sm:size-38 object-cover border-2 border-slate-100 rounded-md"
                     />
                     <div className="text-center md:text-left">
-                        <h1 className="text-3xl font-semibold text-slate-800">{storeInfo.name}</h1>
+                        <h1 className="text-3xl font-semibold text-red-950">{storeInfo.name}</h1>
                         <p className="text-sm text-slate-600 mt-2 max-w-lg">{storeInfo.description}</p>
                         <div className="text-xs text-slate-500 mt-4 space-y-1"></div>
                         <div className="space-y-2 text-sm text-slate-500">
@@ -52,7 +52,7 @@ export default function ShopByUser() {
 
             {/* Products */}
             <div className="max-w-7xl mx-auto mb-40">
-                <h1 className="text-2xl mt-12">Shop <span className="text-slate-800 font-medium">Products</span></h1>
+                <h1 className="text-2xl mt-12">Shop <span className="text-red-950 font-medium">Products</span></h1>
                 <div className="mt-5 grid grid-cols-2 sm:flex flex-wrap gap-6 xl:gap-12 mx-auto">
                     {products.map((product) => <ProductCard key={product.id} product={product} />)}
                 </div>

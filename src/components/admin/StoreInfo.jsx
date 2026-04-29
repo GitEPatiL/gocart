@@ -5,7 +5,7 @@ const StoreInfo = ({ store }) => {
         <div className="flex-1 space-y-2 text-sm">
             <img width={100} height={100} src={store.logo} alt={store.name} className="max-w-20 max-h-20 object-contain shadow rounded-full max-sm:mx-auto" />
             <div className="flex flex-col sm:flex-row gap-3 items-center">
-                <h3 className="text-xl font-semibold text-slate-800">{store.name}</h3>
+                <h3 className="text-xl font-semibold text-red-950">{store.name}</h3>
                 <span className="text-sm">@{store.username}</span>
                 <span className={`text-xs font-semibold px-4 py-1 rounded-full ${store.status === 'pending' ? 'bg-yellow-100 text-yellow-800' : store.status === 'rejected' ? 'bg-red-100 text-red-800' : 'bg-red-100 text-red-800'}`}>
                     {store.status}

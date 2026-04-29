@@ -34,7 +34,7 @@ const Hero = () => {
                     </div>
                     <div className="flex-1 flex items-center justify-between w-full bg-slate-200 rounded-3xl p-6 px-8 group border border-slate-300">
                         <div>
-                            <p className="text-3xl font-medium bg-gradient-to-r from-slate-800 to-[#78B2FF] bg-clip-text text-transparent max-w-40">20% discounts</p>
+                            <p className="text-3xl font-medium bg-gradient-to-r from-slate-800 to-[#FF4500] bg-clip-text text-transparent max-w-40">20% discounts</p>
                             <p className="flex items-center gap-1 mt-4">View more <ArrowRightIcon className="group-hover:ml-2 transition-all" size={18} /></p>
                         </div>
                         <img className="w-35" src={assets.hero_product_img2} alt="" />

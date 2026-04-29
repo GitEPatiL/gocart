@@ -43,7 +43,7 @@ export default function AdminCoupons() {
 
             {/* Add Coupon */}
             <form onSubmit={(e) => toast.promise(handleAddCoupon(e), { loading: 'Adding coupon...' })} className="max-w-sm text-sm">
-                <h2 className="text-2xl">Add <span className="text-slate-800 font-medium">Coupons</span></h2>
+                <h2 className="text-2xl">Add <span className="text-red-950 font-medium">Coupons</span></h2>
                 <div className="flex gap-2 max-sm:flex-col mt-2">
                     <input type="text" placeholder="Coupon Code" className="w-full mt-2 p-2 border border-slate-200 outline-slate-400 rounded-md"
                         name="code" value={newCoupon.code} onChange={handleChange} required
@@ -92,7 +92,7 @@ export default function AdminCoupons() {
 
             {/* List Coupons */}
             <div className="mt-14">
-                <h2 className="text-2xl">List <span className="text-slate-800 font-medium">Coupons</span></h2>
+                <h2 className="text-2xl">List <span className="text-red-950 font-medium">Coupons</span></h2>
                 <div className="overflow-x-auto mt-4 rounded-lg border border-slate-200 max-w-4xl">
                     <table className="min-w-full bg-white text-sm">
                         <thead className="bg-slate-50">
@@ -109,13 +109,13 @@ export default function AdminCoupons() {
                         <tbody className="divide-y divide-slate-200">
                             {coupons.map((coupon) => (
                                 <tr key={coupon.code} className="hover:bg-slate-50">
-                                    <td className="py-3 px-4 font-medium text-slate-800">{coupon.code}</td>
-                                    <td className="py-3 px-4 text-slate-800">{coupon.description}</td>
-                                    <td className="py-3 px-4 text-slate-800">{coupon.discount}%</td>
-                                    <td className="py-3 px-4 text-slate-800">{format(coupon.expiresAt, 'yyyy-MM-dd')}</td>
-                                    <td className="py-3 px-4 text-slate-800">{coupon.forNewUser ? 'Yes' : 'No'}</td>
-                                    <td className="py-3 px-4 text-slate-800">{coupon.forMember ? 'Yes' : 'No'}</td>
-                                    <td className="py-3 px-4 text-slate-800">
+                                    <td className="py-3 px-4 font-medium text-red-950">{coupon.code}</td>
+                                    <td className="py-3 px-4 text-red-950">{coupon.description}</td>
+                                    <td className="py-3 px-4 text-red-950">{coupon.discount}%</td>
+                                    <td className="py-3 px-4 text-red-950">{format(coupon.expiresAt, 'yyyy-MM-dd')}</td>
+                                    <td className="py-3 px-4 text-red-950">{coupon.forNewUser ? 'Yes' : 'No'}</td>
+                                    <td className="py-3 px-4 text-red-950">{coupon.forMember ? 'Yes' : 'No'}</td>
+                                    <td className="py-3 px-4 text-red-950">
                                         <DeleteIcon
                                             onClick={() => toast.promise(deleteCoupon(coupon.code), { loading: 'Deleting coupon...' })}
                                             className="w-5 h-5 text-red-500 hover:text-red-800 cursor-pointer"

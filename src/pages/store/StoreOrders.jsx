@@ -27,7 +27,7 @@ export default function StoreOrders() {
 
     return (
         <>
-            <h1 className="text-2xl text-slate-500 mb-5">Store <span className="text-slate-800 font-medium">Orders</span></h1>
+            <h1 className="text-2xl text-slate-500 mb-5">Store <span className="text-red-950 font-medium">Orders</span></h1>
             {orders.length === 0 ? (
                 <p>No orders found</p>
             ) : (
@@ -45,7 +45,7 @@ export default function StoreOrders() {
                                 <tr key={order.id} className="hover:bg-gray-50 transition-colors duration-150 cursor-pointer" onClick={() => openModal(order)}>
                                     <td className="pl-6 text-red-600">{index + 1}</td>
                                     <td className="px-4 py-3">{order.user?.name}</td>
-                                    <td className="px-4 py-3 font-medium text-slate-800">{currency}{order.total}</td>
+                                    <td className="px-4 py-3 font-medium text-red-950">{currency}{order.total}</td>
                                     <td className="px-4 py-3">{order.paymentMethod}</td>
                                     <td className="px-4 py-3">
                                         {order.isCouponUsed ? (
@@ -53,7 +53,7 @@ export default function StoreOrders() {
                                         ) : '—'}
                                     </td>
                                     <td className="px-4 py-3" onClick={(e) => e.stopPropagation()}>
-                                        <select value={order.status} onChange={e => updateOrderStatus(order.id, e.target.value)} className="border-gray-300 rounded-md text-sm focus:ring focus:ring-blue-200">
+                                        <select value={order.status} onChange={e => updateOrderStatus(order.id, e.target.value)} className="border-red-200 rounded-md text-sm focus:ring focus:ring-blue-200">
                                             <option value="ORDER_PLACED">ORDER_PLACED</option>
                                             <option value="PROCESSING">PROCESSING</option>
                                             <option value="SHIPPED">SHIPPED</option>
@@ -86,7 +86,7 @@ export default function StoreOrders() {
                                     <div key={i} className="flex items-center gap-4 border border-slate-100 shadow rounded p-2">
                                         <img src={item.product.images?.[0].src || item.product.images?.[0]} alt={item.product?.name} className="w-16 h-16 object-cover rounded" />
                                         <div className="flex-1">
-                                            <p className="text-slate-800">{item.product?.name}</p>
+                                            <p className="text-red-950">{item.product?.name}</p>
                                             <p>Qty: {item.quantity}</p>
                                             <p>Price: {currency}{item.price}</p>
                                         </div>

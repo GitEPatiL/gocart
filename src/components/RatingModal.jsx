@@ -22,7 +22,7 @@ const RatingModal = ({ ratingModal, setRatingModal }) => {
                         <Star key={i} className={`size-8 cursor-pointer ${rating > i ? 'text-red-400 fill-current' : 'text-gray-300'}`} onClick={() => setRating(i + 1)} />
                     ))}
                 </div>
-                <textarea className="w-full p-2 border border-gray-300 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-red-400" placeholder="Write your review (optional)" rows="4" value={review} onChange={(e) => setReview(e.target.value)}></textarea>
+                <textarea className="w-full p-2 border border-red-200 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-red-400" placeholder="Write your review (optional)" rows="4" value={review} onChange={(e) => setReview(e.target.value)}></textarea>
                 <button onClick={() => toast.promise(handleSubmit(), { loading: 'Submitting...' })} className="w-full bg-red-500 text-white py-2 rounded-md hover:bg-red-600 transition">Submit Rating</button>
             </div>
         </div>

@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -10,6 +11,8 @@ import LatestProducts from '@/components/LatestProducts'
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
+    const container = useRef();
+
     useGSAP(() => {
         const elements = gsap.utils.toArray('.gsap-fade-up');
         elements.forEach((el) => {
@@ -28,10 +31,10 @@ export default function Home() {
                 }
             );
         });
-    }, []);
+    }, { scope: container });
 
     return (
-        <div>
+        <div ref={container}>
             <div className="gsap-fade-up"><Hero /></div>
             <div className="gsap-fade-up"><LatestProducts /></div>
             <div className="gsap-fade-up"><BestSelling /></div>
