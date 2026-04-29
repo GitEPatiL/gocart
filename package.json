@@ -2,16 +2,16 @@
   "name": "gocart",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "next": "15.3.5",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
+    "react-router-dom": "^7.6.0",
     "react-redux": "^9.2.0",
     "react-hot-toast": "^2.5.2",
     "recharts": "^3.1.2",
@@ -20,7 +20,9 @@
     "@reduxjs/toolkit": "^2.8.2"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "@vitejs/plugin-react": "^4.5.2",
+    "@tailwindcss/vite": "^4.1.5",
+    "tailwindcss": "^4.1.5",
+    "vite": "^6.3.5"
   }
 }

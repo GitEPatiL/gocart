@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@layer components {
+    @keyframes marqueeScroll {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@layer base {
+    body {
+        font-family: 'Outfit', sans-serif;
+    }
+    button {
+        cursor: pointer;
+    }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
