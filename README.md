@@ -1,81 +1,98 @@
 <div align="center">
-  <h1><img src="/favicon.png" width="20" height="20" alt="YourCart Favicon">
-   YourCart</h1>
+  <img src="public/favicon.png" width="120" height="120" alt="YourCart Logo">
+  <h1>YourCart</h1>
+  <p><strong>A Premium E-Commerce Experience</strong></p>
   <p>
-    An open-source multi-vendor e-commerce platform built with Next.js and Tailwind CSS.
-  </p>
-  <p>
-    <a href="https://github.com/GreatStackDev/goCart/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/GreatStackDev/goCart?style=for-the-badge" alt="License"></a>
-    <a href="https://github.com/GreatStackDev/goCart/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge" alt="PRs Welcome"></a>
-    <a href="https://github.com/GreatStackDev/goCart/issues"><img src="https://img.shields.io/github/issues/GreatStackDev/goCart?style=for-the-badge" alt="GitHub issues"></a>
+    Built with React, Vite, Tailwind CSS (v4), and GSAP for fluid scrolling animations.
   </p>
 </div>
 
 ---
 
-## 📖 Table of Contents
+## 📖 Overview
 
-- [✨ Features](#-features)
-- [🛠️ Tech Stack](#-tech-stack)
-- [🚀 Getting Started](#-getting-started)
-- [🤝 Contributing](#-contributing)
-- [📜 License](#-license)
+**YourCart** is a modern, ultra-premium frontend for an e-commerce platform. Originally migrated from Next.js, this project has been fully rebuilt into a blazing-fast Single Page Application (SPA) using **Vite** and **React**.
+
+The application features a unique **"Dragon Blade" theme**, offering a striking combination of deep slate backgrounds with fiery red and orange gradients. To elevate the user experience, we've integrated **GSAP ScrollTrigger** animations to smoothly fade in products and sections as users navigate the shop.
+
+## ✨ Features
+
+- **Blazing Fast SPA:** Instant navigation and hot module replacement powered by Vite.
+- **GSAP Scroll Animations:** High-performance fade-up and scrolling animations for a highly interactive feel.
+- **Dragon Blade Theme:** A custom luxury brand UI with vibrant red/orange elements against a dark slate canvas.
+- **Premium Mock Data:** Pre-populated with luxury pricing to mimic a high-end storefront environment (Prices in ₹ INR).
+- **Responsive Design:** Fully mobile-optimized with Tailwind CSS v4.
+
+## 🛠️ Tech Stack
+
+- **Framework:** React 19 + Vite
+- **Routing:** React Router v6
+- **Styling:** Tailwind CSS (v4)
+- **Animations:** GSAP & `@gsap/react`
+- **State Management:** Redux Toolkit
+- **Icons:** Lucide React
 
 ---
 
-## Features
+## 🚀 Getting Started
 
-- **Multi-Vendor Architecture:** Allows multiple vendors to register, manage their own products, and sell on a single platform.
-- **Customer-Facing Storefront:** A beautiful and responsive user interface for customers to browse and purchase products.
-- **Vendor Dashboards:** Dedicated dashboards for vendors to manage products, view sales analytics, and track orders.
-- **Admin Panel:** A comprehensive dashboard for platform administrators to oversee vendors, products, and commissions.
+Follow these instructions to get the project up and running on your local machine.
 
-## 🛠️ Tech Stack <a name="-tech-stack"></a>
+### Prerequisites
 
-- **Framework:** Vite + React
-- **Styling:** Tailwind CSS (v4)
-- **UI Components:** Lucide React for icons
-- **State Management:** Redux Toolkit
+Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-## 🚀 Getting Started <a name="-getting-started"></a>
+### Installation
 
-First, install the dependencies. We recommend using `npm` for this project.
-
+1. Clone the repository and install the dependencies:
 ```bash
 npm install
 ```
 
-Then, run the development server:
-
+2. Start the development server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open your browser and navigate to:
+```text
+http://localhost:5173
+```
 
-You can start editing the page by modifying `src/pages/Home.jsx`. The page auto-updates as you edit the file.
+### Building for Production
+
+To create an optimized production build, run:
+```bash
+npm run build
+```
+This will output the finalized assets into the `dist` directory.
 
 ---
 
-## 🤝 Contributing <a name="-contributing"></a>
+## 📂 Project Structure
 
-We welcome contributions! Please see our [CONTRIBUTING.md](./CONTRIBUTING.md) for more details on how to get started.
+```text
+├── public/              # Static assets (Favicon, robots.txt)
+├── src/
+│   ├── assets/          # Static images, dummy data, logos
+│   ├── components/      # Reusable UI components (Hero, Navbar, etc.)
+│   ├── layouts/         # Layout wrappers for Public, Admin, and Store
+│   ├── lib/             # Redux store and slices
+│   ├── pages/           # Application route pages
+│   ├── App.jsx          # Central router and layout configuration
+│   ├── index.css        # Global styles and Tailwind imports
+│   └── main.jsx         # React application entry point
+├── .env                 # Environment variables
+├── index.html           # Main HTML document
+└── vite.config.js       # Vite configuration
+```
+
+## 📝 Editing the App
+
+You can start editing the application by modifying `src/pages/Home.jsx` or any of the components in the `src/components/` directory. The page auto-updates in real-time as you save your files.
 
 ---
 
-## 📜 License <a name="-license"></a>
-
-This project is licensed under the MIT License. See the [LICENSE.md](./LICENSE.md) file for details.
-
-## Learn More
-
-To learn more about Vite and React, take a look at the following resources:
-
-- [Vite Documentation](https://vitejs.dev/guide/) - learn about Vite features and API.
-- [React Documentation](https://react.dev/) - learn about React components and hooks.
+<div align="center">
+  Made with ❤️ using React & Vite.
+</div>

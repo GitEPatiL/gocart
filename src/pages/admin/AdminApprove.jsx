@@ -36,7 +36,7 @@ export default function AdminApprove() {
                             <div className="flex gap-3 pt-2 flex-wrap">
                                 <button
                                     onClick={() => toast.promise(handleApprove({ storeId: store.id, status: 'approved' }), { loading: 'approving' })}
-                                    className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 text-sm"
+                                    className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 text-sm"
                                 >
                                     Approve
                                 </button>

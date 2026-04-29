@@ -43,13 +43,13 @@ export default function StoreOrders() {
                         <tbody className="divide-y divide-gray-100">
                             {orders.map((order, index) => (
                                 <tr key={order.id} className="hover:bg-gray-50 transition-colors duration-150 cursor-pointer" onClick={() => openModal(order)}>
-                                    <td className="pl-6 text-green-600">{index + 1}</td>
+                                    <td className="pl-6 text-red-600">{index + 1}</td>
                                     <td className="px-4 py-3">{order.user?.name}</td>
                                     <td className="px-4 py-3 font-medium text-slate-800">{currency}{order.total}</td>
                                     <td className="px-4 py-3">{order.paymentMethod}</td>
                                     <td className="px-4 py-3">
                                         {order.isCouponUsed ? (
-                                            <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full">{order.coupon?.code}</span>
+                                            <span className="bg-red-100 text-red-700 text-xs px-2 py-1 rounded-full">{order.coupon?.code}</span>
                                         ) : '—'}
                                     </td>
                                     <td className="px-4 py-3" onClick={(e) => e.stopPropagation()}>
@@ -74,10 +74,10 @@ export default function StoreOrders() {
                         <h2 className="text-xl font-semibold text-slate-900 mb-4 text-center">Order Details</h2>
                         <div className="mb-4">
                             <h3 className="font-semibold mb-2">Customer Details</h3>
-                            <p><span className="text-green-700">Name:</span> {selectedOrder.user?.name}</p>
-                            <p><span className="text-green-700">Email:</span> {selectedOrder.user?.email}</p>
-                            <p><span className="text-green-700">Phone:</span> {selectedOrder.address?.phone}</p>
-                            <p><span className="text-green-700">Address:</span> {`${selectedOrder.address?.street}, ${selectedOrder.address?.city}, ${selectedOrder.address?.state}, ${selectedOrder.address?.zip}, ${selectedOrder.address?.country}`}</p>
+                            <p><span className="text-red-700">Name:</span> {selectedOrder.user?.name}</p>
+                            <p><span className="text-red-700">Email:</span> {selectedOrder.user?.email}</p>
+                            <p><span className="text-red-700">Phone:</span> {selectedOrder.address?.phone}</p>
+                            <p><span className="text-red-700">Address:</span> {`${selectedOrder.address?.street}, ${selectedOrder.address?.city}, ${selectedOrder.address?.state}, ${selectedOrder.address?.zip}, ${selectedOrder.address?.country}`}</p>
                         </div>
                         <div className="mb-4">
                             <h3 className="font-semibold mb-2">Products</h3>
@@ -95,13 +95,13 @@ export default function StoreOrders() {
                             </div>
                         </div>
                         <div className="mb-4">
-                            <p><span className="text-green-700">Payment Method:</span> {selectedOrder.paymentMethod}</p>
-                            <p><span className="text-green-700">Paid:</span> {selectedOrder.isPaid ? 'Yes' : 'No'}</p>
+                            <p><span className="text-red-700">Payment Method:</span> {selectedOrder.paymentMethod}</p>
+                            <p><span className="text-red-700">Paid:</span> {selectedOrder.isPaid ? 'Yes' : 'No'}</p>
                             {selectedOrder.isCouponUsed && (
-                                <p><span className="text-green-700">Coupon:</span> {selectedOrder.coupon.code} ({selectedOrder.coupon.discount}% off)</p>
+                                <p><span className="text-red-700">Coupon:</span> {selectedOrder.coupon.code} ({selectedOrder.coupon.discount}% off)</p>
                             )}
-                            <p><span className="text-green-700">Status:</span> {selectedOrder.status}</p>
-                            <p><span className="text-green-700">Order Date:</span> {new Date(selectedOrder.createdAt).toLocaleString()}</p>
+                            <p><span className="text-red-700">Status:</span> {selectedOrder.status}</p>
+                            <p><span className="text-red-700">Order Date:</span> {new Date(selectedOrder.createdAt).toLocaleString()}</p>
                         </div>
                         <div className="flex justify-end">
                             <button onClick={closeModal} className="px-4 py-2 bg-slate-200 rounded hover:bg-slate-300">Close</button>

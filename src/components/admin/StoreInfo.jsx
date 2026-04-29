@@ -7,7 +7,7 @@ const StoreInfo = ({ store }) => {
             <div className="flex flex-col sm:flex-row gap-3 items-center">
                 <h3 className="text-xl font-semibold text-slate-800">{store.name}</h3>
                 <span className="text-sm">@{store.username}</span>
-                <span className={`text-xs font-semibold px-4 py-1 rounded-full ${store.status === 'pending' ? 'bg-yellow-100 text-yellow-800' : store.status === 'rejected' ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'}`}>
+                <span className={`text-xs font-semibold px-4 py-1 rounded-full ${store.status === 'pending' ? 'bg-yellow-100 text-yellow-800' : store.status === 'rejected' ? 'bg-red-100 text-red-800' : 'bg-red-100 text-red-800'}`}>
                     {store.status}
                 </span>
             </div>

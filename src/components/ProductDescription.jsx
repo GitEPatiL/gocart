@@ -41,7 +41,7 @@ const ProductDescription = ({ product }) => {
                 <img src={product.store.logo} alt="" className="size-11 rounded-full ring ring-slate-400" />
                 <div>
                     <p className="font-medium text-slate-600">Product by {product.store.name}</p>
-                    <Link to={`/shop/${product.store.username}`} className="flex items-center gap-1.5 text-green-500">
+                    <Link to={`/shop/${product.store.username}`} className="flex items-center gap-1.5 text-red-500">
                         view store <ArrowRight size={14} />
                     </Link>
                 </div>
