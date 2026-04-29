@@ -4,7 +4,7 @@ import Loading from '@/components/Loading'
 import { productDummyData } from '@/assets/assets'
 
 export default function StoreManageProduct() {
-    const currency = import.meta.env.VITE_CURRENCY_SYMBOL || '$'
+    const currency = import.meta.env.VITE_CURRENCY_SYMBOL || '₹'
     const [loading, setLoading] = useState(true)
     const [products, setProducts] = useState([])
 

@@ -6,7 +6,7 @@ import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 
 const OrderSummary = ({ totalPrice, items }) => {
-    const currency = import.meta.env.VITE_CURRENCY_SYMBOL || '$'
+    const currency = import.meta.env.VITE_CURRENCY_SYMBOL || '₹'
     const navigate = useNavigate()
     const addressList = useSelector(state => state.address.list)
 

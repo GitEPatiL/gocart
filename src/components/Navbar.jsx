@@ -1,4 +1,5 @@
-import { Search, ShoppingCart } from 'lucide-react'
+import { assets } from '@/assets/assets'
+import { Search, ShoppingCart, UserRound } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
@@ -17,9 +18,9 @@ const Navbar = () => {
         <nav className="relative bg-white">
             <div className="mx-6">
                 <div className="flex items-center justify-between max-w-7xl mx-auto py-4 transition-all">
-                    <Link to="/" className="relative text-4xl font-semibold text-slate-700">
-                        <span className="text-green-600">go</span>cart<span className="text-green-600 text-5xl leading-0">.</span>
-                        <p className="absolute text-xs font-semibold -top-1 -right-8 px-3 p-0.5 rounded-full flex items-center gap-2 text-white bg-green-500">plus</p>
+                    <Link to="/" className="relative">
+                        <img src={assets.yourcart_logo} alt="YourCart Logo" className="w-28 sm:w-32 h-26" />
+                        <p className="absolute text-[10px] font-semibold -top-2 -right-5 px-2 p-0.5 rounded-full flex items-center gap-1 text-white bg-red-800">plus</p>
                     </Link>
 
                     {/* Desktop Menu */}

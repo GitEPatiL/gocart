@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 const ProductDetails = ({ product }) => {
     const productId = product.id
-    const currency = import.meta.env.VITE_CURRENCY_SYMBOL || '$'
+    const currency = import.meta.env.VITE_CURRENCY_SYMBOL || '₹'
     const cart = useSelector(state => state.cart.cartItems)
     const dispatch = useDispatch()
     const navigate = useNavigate()

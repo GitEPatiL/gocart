@@ -2,7 +2,7 @@ import { StarIcon } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const ProductCard = ({ product }) => {
-    const currency = import.meta.env.VITE_CURRENCY_SYMBOL || '$'
+    const currency = import.meta.env.VITE_CURRENCY_SYMBOL || '₹'
 
     const rating = Math.round(product.rating.reduce((acc, curr) => acc + curr.rating, 0) / product.rating.length)
 

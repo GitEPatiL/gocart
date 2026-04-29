@@ -5,7 +5,7 @@ import { useState } from 'react'
 import RatingModal from './RatingModal'
 
 const OrderItem = ({ order }) => {
-    const currency = import.meta.env.VITE_CURRENCY_SYMBOL || '$'
+    const currency = import.meta.env.VITE_CURRENCY_SYMBOL || '₹'
     const [ratingModal, setRatingModal] = useState(null)
     const { ratings } = useSelector(state => state.rating)
 

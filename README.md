@@ -1,6 +1,6 @@
 <div align="center">
-  <h1><img src="https://gocart-gs.vercel.app/favicon.ico" width="20" height="20" alt="GoCart Favicon">
-   GoCart</h1>
+  <h1><img src="/favicon.png" width="20" height="20" alt="YourCart Favicon">
+   YourCart</h1>
   <p>
     An open-source multi-vendor e-commerce platform built with Next.js and Tailwind CSS.
   </p>
@@ -32,8 +32,8 @@
 
 ## 🛠️ Tech Stack <a name="-tech-stack"></a>
 
-- **Framework:** Next.js
-- **Styling:** Tailwind CSS
+- **Framework:** Vite + React
+- **Styling:** Tailwind CSS (v4)
 - **UI Components:** Lucide React for icons
 - **State Management:** Redux Toolkit
 
@@ -59,9 +59,7 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/(public)/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Outfit](https://vercel.com/font), a new font family for Vercel.
+You can start editing the page by modifying `src/pages/Home.jsx`. The page auto-updates as you edit the file.
 
 ---
 
@@ -77,9 +75,7 @@ This project is licensed under the MIT License. See the [LICENSE.md](./LICENSE.m
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about Vite and React, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Vite Documentation](https://vitejs.dev/guide/) - learn about Vite features and API.
+- [React Documentation](https://react.dev/) - learn about React components and hooks.

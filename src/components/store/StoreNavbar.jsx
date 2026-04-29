@@ -1,11 +1,12 @@
+import { assets } from '@/assets/assets'
 import { Link } from 'react-router-dom'
 
 const StoreNavbar = () => {
     return (
         <div className="flex items-center justify-between px-12 py-3 border-b border-slate-200 transition-all">
-            <Link to="/" className="relative text-4xl font-semibold text-slate-700">
-                <span className="text-green-600">go</span>cart<span className="text-green-600 text-5xl leading-0">.</span>
-                <p className="absolute text-xs font-semibold -top-1 -right-11 px-3 p-0.5 rounded-full flex items-center gap-2 text-white bg-green-500">Store</p>
+            <Link to="/" className="relative">
+                <img src={assets.yourcart_logo} alt="YourCart Logo" className="w-28 sm:w-32 h-auto" />
+                <p className="absolute text-[10px] font-semibold -top-2 -right-6 px-2 p-0.5 rounded-full flex items-center gap-1 text-white bg-red-800">Store</p>
             </Link>
             <div className="flex items-center gap-3">
                 <p>Hi, Seller</p>

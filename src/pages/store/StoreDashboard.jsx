@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 export default function StoreDashboard() {
-    const currency = import.meta.env.VITE_CURRENCY_SYMBOL || '$'
+    const currency = import.meta.env.VITE_CURRENCY_SYMBOL || '₹'
     const navigate = useNavigate()
 
     const [loading, setLoading] = useState(true)

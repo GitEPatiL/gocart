@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 export default function Cart() {
-    const currency = import.meta.env.VITE_CURRENCY_SYMBOL || '$'
+    const currency = import.meta.env.VITE_CURRENCY_SYMBOL || '₹'
 
     const { cartItems } = useSelector(state => state.cart)
     const products = useSelector(state => state.product.list)
